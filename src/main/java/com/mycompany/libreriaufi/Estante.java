@@ -1,0 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.libreriaufi;
+
+/**
+ *
+ * @author H
+ */
+public class Estante {
+    //sera de 3 fila 4 columnas 
+    
+}
