@@ -26,6 +26,20 @@ public class Ventas {    //verificar si se agrega factura y fecha y hora
     public double totalventa(){
         return Libro.getPrecio() * ventadelibro;
     }
+
+    public Libro getLibro() {
+        return Libro;
+    }
+    
+    
+
+    public void setLibro(Libro Libro) {
+        this.Libro = Libro;
+    }
+
+    public void setVentadelibro(int ventadelibro) {
+        this.ventadelibro = ventadelibro;
+    }
     
     
     
