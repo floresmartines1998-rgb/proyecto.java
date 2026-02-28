@@ -8,7 +8,7 @@ package com.mycompany.libreriaufi;
  *
  * @author H
  */
-public class Estante {
+public class Reporte {
     //sera de 3 fila 4 columnas 
     
 }
