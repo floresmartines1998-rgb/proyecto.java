@@ -9,5 +9,8 @@ package com.mycompany.libreriaufi;
  * @author H
  */
 public class Inventario {
+    //definir como agreagar los libros, vasn a haber algunis de forma fija o solo los que se pueden agregar
+    
+    
     
 }
