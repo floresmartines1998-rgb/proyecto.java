@@ -16,6 +16,9 @@ public class Libro {             //se clara los String a utilizar
     public int cantidad;
     public double precio;
     public Ubicacion Ubicacion;
+    public String mostrarlistadelibros() {
+        return "los libros disponibles son: " + titulo + autor+ precio + categoria ;
+    }
     
     //construtor vacio 
 
