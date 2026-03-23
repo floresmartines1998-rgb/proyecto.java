@@ -4,6 +4,8 @@
  */
 package com.mycompany.libreriaufi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author H
@@ -16,9 +18,9 @@ public class Libro {             //se clara los String a utilizar
     public int cantidad;
     public double precio;
     public Ubicacion Ubicacion;
-    public String mostrarlistadelibros() {
-        return "los libros disponibles son: " + titulo + autor+ precio + categoria ;
-    }
+    
+    
+    
     
     //construtor vacio 
 
@@ -71,13 +73,24 @@ public class Libro {             //se clara los String a utilizar
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-
+     //asignar o cambiar ubicacion 
     public void setUbicacion(Ubicacion Ubicacion) {
         this.Ubicacion = Ubicacion;
     }
     
     
-    
-    
+    public void reducstock(int vendido){
+        this.cantidad -= vendido;
+    }
+    // nota  arreglar el salto de pagina 
+    public void mostratubi(){
+        JOptionPane.showInternalMessageDialog(null,
+                "codigo: "+codigo+
+                "Ntitulo: "+titulo+
+                "nautor: "+autor+
+                "ncategoria "+categoria+
+                "nprecio: "+precio+
+                "nubicacion: "+Ubicacion);
+    }
     
 }

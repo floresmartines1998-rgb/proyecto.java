@@ -35,9 +35,11 @@ public class Ubicacion {
     public int getColuma() {
         return columa;
     }
-    
+    // se usa para mostrar la ubicacion como terxto nadamas 
     public String ubicacion1(){
-        return "Estante: " + this.estante + "filas: " + this.fila + "columna" + this.columa;
+        return "Estante: " + this.estante + 
+                "filas: " + this.fila + 
+                "columna: " + this.columa;
     }
     
     
