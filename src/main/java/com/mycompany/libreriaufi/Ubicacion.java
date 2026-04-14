@@ -12,16 +12,15 @@ public class Ubicacion {
     
     public int estante;
     public int fila;
-    public int columa;
+    public int columna;
 
-    public Ubicacion() { // construtor vacio/ para evitar errores 
-        
+    public Ubicacion() {
     }
 
-    public Ubicacion(int estante, int fila, int columa) {
+    public Ubicacion(int estante, int fila, int columna) {
         this.estante = estante;
         this.fila = fila;
-        this.columa = columa;
+        this.columna = columna;
     }
 
     public int getEstante() {
@@ -32,16 +31,14 @@ public class Ubicacion {
         return fila;
     }
 
-    public int getColuma() {
-        return columa;
+    public int getColumna() {
+        return columna;
     }
-    
+
+    // Mejorado
     public String ubicacion1(){
-        return "Estante: " + this.estante + "filas: " + this.fila + "columna" + this.columa;
+        return "Estante: " + estante + 
+               ", Fila: " + fila + 
+               ", Columna: " + columna;
     }
-    
-    
-    
-    
-    
 }
