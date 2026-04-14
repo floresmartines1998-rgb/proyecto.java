@@ -10,6 +10,7 @@ package com.mycompany.libreriaufi;
  */
 public class Ubicacion {
     
+    
     public int estante;
     public int fila;
     public int columna;
@@ -34,19 +35,11 @@ public class Ubicacion {
     public int getColumna() {
         return columna;
     }
-<<<<<<< HEAD
 
     // Mejorado
     public String ubicacion1(){
         return "Estante: " + estante + 
                ", Fila: " + fila + 
                ", Columna: " + columna;
-=======
-    // se usa para mostrar la ubicacion como terxto nadamas 
-    public String ubicacion1(){
-        return "Estante: " + this.estante + 
-                "filas: " + this.fila + 
-                "columna: " + this.columa;
->>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
     }
 }
