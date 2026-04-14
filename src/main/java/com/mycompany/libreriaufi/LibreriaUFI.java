@@ -37,7 +37,7 @@ public class LibreriaUFI {
                 "3. Vender libro\n" +
                 "4. Ver inventario\n" +
                 "5. Reporte ventas\n" +
-                "6. Ocupacion\n" +
+                "6. Espacios disponibles totales\n" +
                 "7. Buscar libro\n" +
                 "0. Salir" ));
           
@@ -141,11 +141,11 @@ public class LibreriaUFI {
                     Reporte.Repventas();
                     break;
 
-                case 7:
+                case 6:
                     Reporte.ocupacion(inventario);
                     break;
 
-                case 8:
+                case 7:
                     String buscar = JOptionPane.showInputDialog("Titulo a buscar:");
                     Reporte.buscar(inventario, buscar);
                     break;
