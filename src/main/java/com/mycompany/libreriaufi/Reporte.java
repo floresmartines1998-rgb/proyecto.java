@@ -16,6 +16,7 @@ public class Reporte {
 
         String invencomple = "";
 
+<<<<<<< HEAD
         for(int estante = 0; estante < inv.estantes.length; estante++){
             for(int fila = 0; fila < inv.estantes[estante].length; fila++){
                 for(int columna = 0; columna < inv.estantes[estante][fila].length; columna++){
@@ -25,6 +26,15 @@ public class Reporte {
                                  " (Estante " + estante +
                                  ", Fila " + fila +
                                  ", Columna " + columna + ")\n";
+=======
+        for(int e=0; e<inv.estantes.length; e++){
+            for(int f=0; f<inv.estantes[e].length; f++){
+                for(int c=0; c<inv.estantes[e][f].length; c++){
+
+                    if(inv.estantes[e][f][c] != null){
+                        invencomple += inv.estantes[e][f][c].getTitulo() +
+                                 " ("+e+","+f+","+c+")\n";
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
                     }
                 }
             }
@@ -33,11 +43,16 @@ public class Reporte {
         JOptionPane.showMessageDialog(null, invencomple);
     }
 
+<<<<<<< HEAD
     // b. Espacios vacíos
+=======
+    // b. Bajo stock (vacíos)
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
     public static void vacios(Gestioestante inv){
 
         String stockvacios = "";
 
+<<<<<<< HEAD
         for(int estante = 0; estante < inv.estantes.length; estante++){
             for(int fila = 0; fila < inv.estantes[estante].length; fila++){
                 for(int columna = 0; columna < inv.estantes[estante][fila].length; columna++){
@@ -46,6 +61,14 @@ public class Reporte {
                         stockvacios += "(Estante " + estante +
                                         ", Fila " + fila +
                                         ", Columna " + columna + ")\n";
+=======
+        for(int e=0; e<inv.estantes.length; e++){
+            for(int f=0; f<inv.estantes[e].length; f++){
+                for(int c=0; c<inv.estantes[e][f].length; c++){
+
+                    if(inv.estantes[e][f][c] == null){
+                        stockvacios += "("+e+","+f+","+c+")\n";
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
                     }
                 }
             }
@@ -62,7 +85,11 @@ public class Reporte {
 
         for(Ventas v : Ventas.historial){
             rv += v.getLibro().getTitulo() +
+<<<<<<< HEAD
                   " - " + v.getTotal() + "\n";
+=======
+                     " - " + v.getTotal() + "\n";
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
             total += v.getTotal();
         }
 
@@ -77,11 +104,19 @@ public class Reporte {
         int libres = 0;
         int ocupados = 0;
 
+<<<<<<< HEAD
         for(int estante = 0; estante < inv.estantes.length; estante++){
             for(int fila = 0; fila < inv.estantes[estante].length; fila++){
                 for(int columna = 0; columna < inv.estantes[estante][fila].length; columna++){
 
                     if(inv.estantes[estante][fila][columna] == null){
+=======
+        for(int e=0; e<inv.estantes.length; e++){
+            for(int f=0; f<inv.estantes[e].length; f++){
+                for(int c=0; c<inv.estantes[e][f].length; c++){
+
+                    if(inv.estantes[e][f][c] == null){
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
                         libres++;
                     }else{
                         ocupados++;
@@ -94,6 +129,7 @@ public class Reporte {
             "Libres: " + libres + "\nOcupados: " + ocupados);
     }
 
+<<<<<<< HEAD
     // e. Buscar por título o código
     public static void buscar(Gestioestante inv, String dato){
 
@@ -112,12 +148,28 @@ public class Reporte {
                                      "Ubicación: Estante " + estante +
                                      ", Fila " + fila +
                                      ", Columna " + columna + "\n\n";
+=======
+    // e. Buscar por título
+    public static void buscar(Gestioestante inv, String titulo){
+
+        String texto = "";
+
+        for(int e=0; e<inv.estantes.length; e++){
+            for(int f=0; f<inv.estantes[e].length; f++){
+                for(int c=0; c<inv.estantes[e][f].length; c++){
+
+                    if(inv.estantes[e][f][c] != null){
+
+                        if(inv.estantes[e][f][c].getTitulo().equalsIgnoreCase(titulo)){
+                            texto += "("+e+","+f+","+c+")\n";
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         if(texto.equals("")){
             JOptionPane.showMessageDialog(null, "Libro no encontrado");
         } else {
@@ -125,3 +177,8 @@ public class Reporte {
         }
     }
 }
+=======
+        JOptionPane.showMessageDialog(null, texto);
+    }
+}
+>>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
