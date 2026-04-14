@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  * @author H
  */
 public class Libro {   
+      
 
     public String codigo;
     public String titulo;
@@ -18,16 +19,7 @@ public class Libro {
     public String categoria;
     public int cantidad;
     public double precio;
-<<<<<<< HEAD
     public Ubicacion ubicacion;
-=======
-    public Ubicacion Ubicacion;
-    
-    
-    
-    
-    //construtor vacio 
->>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
 
     /**
      * Constructor vacío
@@ -85,7 +77,6 @@ public class Libro {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-<<<<<<< HEAD
 
     public void setUbicacion(Ubicacion ubicacion) {
         this.ubicacion = ubicacion;
@@ -110,27 +101,6 @@ public class Libro {
                 "Precio: " + precio + "\n" +
                 "Ubicación: " + (ubicacion != null ? ubicacion.ubicacion1() : "Sin asignar")
         );
-    }
-=======
-     //asignar o cambiar ubicacion 
-    public void setUbicacion(Ubicacion Ubicacion) {
-        this.Ubicacion = Ubicacion;
-    }
-    
-    
-    public void reducstock(int vendido){
-        this.cantidad -= vendido;
-    }
-    // nota  arreglar el salto de pagina 
-    public void mostratubi(){
-        JOptionPane.showInternalMessageDialog(null,
-                "codigo: "+codigo+
-                "Ntitulo: "+titulo+
-                "nautor: "+autor+
-                "ncategoria "+categoria+
-                "nprecio: "+precio+
-                "nubicacion: "+Ubicacion);
-    }
-    
->>>>>>> d826979a59f07411889dc3039bcf51ed9a6f291a
+    } 
+   
 }
