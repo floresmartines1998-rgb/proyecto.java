@@ -4,42 +4,45 @@
  */
 package com.mycompany.libreriaufi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author H
  */
-public class Libro {             //se clara los String a utilizar 
+public class Libro {   
+
     public String codigo;
     public String titulo;
     public String autor;
     public String categoria;
     public int cantidad;
     public double precio;
-    public Ubicacion Ubicacion;
-    public String mostrarlistadelibros() {
-        return "los libros disponibles son: " + titulo + autor+ precio + categoria ;
-    }
-    
-    //construtor vacio 
+    public Ubicacion ubicacion;
 
+    /**
+     * Constructor vacío
+     */
     public Libro() {
-        
     }
-    
-    
-   // construrie por de fecto 
-    public Libro(String codigo, String titulo, String autor, String categoria, int cantidad, double precio, Ubicacion Ubicacion) {
+
+    /**
+     * Constructor completo
+     */
+    public Libro(String codigo, String titulo, String autor, String categoria,
+                 int cantidad, double precio, Ubicacion ubicacion) {
+
         this.codigo = codigo;
         this.titulo = titulo;
         this.autor = autor;
         this.categoria = categoria;
         this.cantidad = cantidad;
         this.precio = precio;
-        this.Ubicacion = Ubicacion;
-        
+        this.ubicacion = ubicacion;
     }
 
-    
+    // GETTERS
+
     public String getCodigo() {
         return codigo;
     }
@@ -65,19 +68,37 @@ public class Libro {             //se clara los String a utilizar
     }
 
     public Ubicacion getUbicacion() {
-        return Ubicacion;
+        return ubicacion;
     }
+
+    // SETTERS
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
-    public void setUbicacion(Ubicacion Ubicacion) {
-        this.Ubicacion = Ubicacion;
+    public void setUbicacion(Ubicacion ubicacion) {
+        this.ubicacion = ubicacion;
     }
-    
-    
-    
-    
-    
+
+    /**
+     * Reduce el stock del libro cuando se vende
+     */
+    public void reducirStock(int vendido) {
+        this.cantidad -= vendido;
+    }
+
+    /**
+     * Muestra la información del libro
+     */
+    public void mostrarInfo() {
+        JOptionPane.showMessageDialog(null,
+                "Código: " + codigo + "\n" +
+                "Título: " + titulo + "\n" +
+                "Autor: " + autor + "\n" +
+                "Categoría: " + categoria + "\n" +
+                "Precio: " + precio + "\n" +
+                "Ubicación: " + (ubicacion != null ? ubicacion.ubicacion1() : "Sin asignar")
+        );
+    }
 }
